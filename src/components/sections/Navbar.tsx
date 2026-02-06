@@ -8,9 +8,9 @@ import { cn } from '@/lib/utils';
 
 const navLinks = [
     { name: 'Home', href: '#home' },
+    { name: 'Projects', href: '#portfolio' },
     { name: 'About', href: '#about' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Services', href: '#services' },
+    { name: 'Service', href: '#services' },
     { name: 'Contact', href: '#contact' },
 ];
 

@@ -91,7 +91,7 @@ export function Contact() {
                         </div>
                     </div>
 
-                    <div className="bg-card border border-border rounded-3xl p-8 md:p-10 shadow-sm relative">
+                    <div className="bg-card/80 backdrop-blur-sm border border-border/80 rounded-3xl p-8 md:p-10 shadow-xl relative">
                         {submitted ? (
                             <motion.div
                                 initial={{ opacity: 0 }}
@@ -113,7 +113,7 @@ export function Contact() {
                                         <input
                                             name="name"
                                             required
-                                            className="w-full bg-muted border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors"
+                                            className="w-full bg-muted/50 border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors"
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -123,14 +123,14 @@ export function Contact() {
                                             name="email"
                                             type="email"
                                             required
-                                            className="w-full bg-muted border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors"
+                                            className="w-full bg-muted/50 border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors"
                                             placeholder="john@example.com"
                                         />
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold uppercase tracking-widest text-muted-foreground ml-1">Subject</label>
-                                    <select name="subject" className="w-full bg-muted border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors">
+                                    <select name="subject" className="w-full bg-muted/50 border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors">
                                         <option>Web Design</option>
                                         <option>UI/UX Strategy</option>
                                         <option>Development</option>
@@ -143,7 +143,7 @@ export function Contact() {
                                         name="message"
                                         required
                                         rows={4}
-                                        className="w-full bg-muted border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors resize-none"
+                                        className="w-full bg-muted/50 border border-border rounded-xl px-5 py-3 outline-none focus:border-primary transition-colors resize-none"
                                         placeholder="Tell me about your project..."
                                     />
                                 </div>

@@ -17,7 +17,7 @@ export function ScenicBackground() {
             {/* Layer 1: Sky / Far Mountains (Lightest Accent/Primary Blend) */}
             <motion.div
                 style={{ y: skyY }}
-                className="absolute inset-0 flex items-end justify-center opacity-5 text-primary"
+                className="absolute inset-0 flex items-end justify-center opacity-10 text-primary"
             >
                 <svg viewBox="0 0 1440 320" className="w-full h-auto translate-y-24 scale-110">
                     <path fill="currentColor" d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -27,7 +27,7 @@ export function ScenicBackground() {
             {/* Layer 2: Mid Mountains (Deeper Theme Color) */}
             <motion.div
                 style={{ y: mountainsFarY }}
-                className="absolute inset-0 flex items-end justify-center opacity-10 text-accent/80"
+                className="absolute inset-0 flex items-end justify-center opacity-20 text-accent/60"
             >
                 <svg viewBox="0 0 1440 320" className="w-full h-auto translate-y-12 scale-105">
                     <path fill="currentColor" d="M0,224L60,213.3C120,203,240,181,360,181.3C480,181,600,203,720,224C840,245,960,267,1080,250.7C1200,235,1320,181,1380,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -37,7 +37,7 @@ export function ScenicBackground() {
             {/* Layer 3: Main Mountains (Muted Dark Base) */}
             <motion.div
                 style={{ y: mountainsMidY }}
-                className="absolute inset-0 flex items-end justify-center text-muted-foreground/5"
+                className="absolute inset-0 flex items-end justify-center text-muted-foreground/10"
             >
                 <svg viewBox="0 0 1440 320" className="w-full h-auto translate-y-4">
                     <path fill="currentColor" d="M0,288L80,266.7C160,245,320,203,480,202.7C640,203,800,245,960,266.7C1120,288,1280,288,1360,288L1440,288L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
@@ -45,7 +45,7 @@ export function ScenicBackground() {
             </motion.div>
 
             {/* Layer 4: Road/Ground (Glassy Dark Section) */}
-            <div className="absolute bottom-0 left-0 right-0 h-[220px] bg-card/10 backdrop-blur-md border-t border-white/5" />
+            <div className="absolute bottom-0 left-0 right-0 h-[220px] bg-card/20 backdrop-blur-md" />
 
             {/* Layer 5: Soaring Birds (Dynamic Sky) */}
             <motion.div

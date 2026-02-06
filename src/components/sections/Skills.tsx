@@ -42,7 +42,7 @@ export function Skills() {
                             whileHover={{ y: -5 }}
                             className="relative group h-full"
                         >
-                            <div className="h-full p-8 rounded-[2rem] bg-card/40 backdrop-blur-xl border border-border/50 hover:border-primary/30 transition-all duration-500 shadow-2xl shadow-black/5">
+                            <div className="h-full p-8 rounded-[2rem] bg-card/60 backdrop-blur-xl border border-border/80 hover:border-primary/50 transition-all duration-500 shadow-2xl shadow-black/10">
                                 <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                                     <span className="text-4xl font-black italic tracking-tighter uppercase">{category[0]}</span>
                                 </div>

@@ -19,7 +19,7 @@ export function Services() {
         <section id="services" className="py-24 bg-background">
             <div className="container mx-auto px-6">
                 <div className="text-center max-w-2xl mx-auto mb-16">
-                    <h2 className="text-xs font-bold tracking-widest text-primary uppercase mb-3">Services</h2>
+                    <h2 className="text-xs font-bold tracking-widest text-primary uppercase mb-3">Service</h2>
                     <h3 className="text-4xl md:text-5xl font-heading font-bold mb-6">How I Can Help You</h3>
                     <p className="text-muted-foreground text-lg">
                         Delivering high-end digital solutions that elevate your brand and engage your audience.
@@ -36,7 +36,7 @@ export function Services() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="p-8 rounded-3xl bg-card border border-border hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group"
+                                className="p-8 rounded-3xl bg-card border border-border/80 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group"
                             >
                                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
                                     <Icon size={28} />
