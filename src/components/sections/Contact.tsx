@@ -14,22 +14,29 @@ export function Contact() {
         setIsSubmitting(true);
 
         const formData = new FormData(e.currentTarget);
-        formData.append("access_key", "YOUR_ACCESS_KEY_HERE");
-        formData.append("from_name", "AMS Portfolio");
+        const jsonData = {
+            name: formData.get("name"),
+            email: formData.get("email"),
+            subject: formData.get("subject"),
+            message: formData.get("message"),
+        };
 
         try {
-            const response = await fetch("https://api.web3forms.com/submit", {
+            const response = await fetch("/api/send", {
                 method: "POST",
-                body: formData
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(jsonData),
             });
 
             const data = await response.json();
 
-            if (data.success) {
+            if (response.ok) {
                 setSubmitted(true);
             } else {
                 console.error("Error", data);
-                alert("Something went wrong. Please try again.");
+                alert(`Error: ${data.error || "Something went wrong"}`);
             }
         } catch (error) {
             console.error("Error", error);
