@@ -36,12 +36,31 @@ export function Navbar() {
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                <Link href="/" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-110 transition-transform">
-                        <span className="text-primary-foreground font-bold text-lg font-heading tracking-tighter">AMS</span>
+                <Link href="/" className="flex items-center gap-2 md:gap-3 group">
+                    <div className="relative w-9 h-9 md:w-10 md:h-10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                        {/* Premium Circular Logo */}
+                        <svg viewBox="0 0 40 40" className="w-full h-full">
+                            <defs>
+                                <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stopColor="var(--color-primary)" />
+                                    <stop offset="100%" stopColor="var(--color-accent)" />
+                                </linearGradient>
+                            </defs>
+                            <circle
+                                cx="20" cy="20" r="18"
+                                className="fill-primary/5 stroke-primary/30 stroke-[1]"
+                            />
+                            <path
+                                d="M12 28L20 8L28 28M15 22H25"
+                                className="stroke-primary stroke-[3] fill-none"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                            />
+                        </svg>
+                        <div className="absolute inset-0 bg-primary/20 blur-md rounded-full -z-10 opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <span className="text-xl font-heading font-bold tracking-tight text-foreground">
-                        AMS Web <span className="text-primary/80">Designer</span>
+                    <span className="text-lg md:text-xl font-heading font-bold tracking-tight text-foreground">
+                        AMS<span className="hidden sm:inline"> Web </span><span className="hidden sm:inline text-primary/80">Designer</span>
                     </span>
                 </Link>
 

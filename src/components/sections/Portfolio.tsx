@@ -39,7 +39,7 @@ export function Portfolio() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                         >
-                            <h2 className="text-xs font-bold tracking-[0.3em] text-primary uppercase mb-6">Selected Works</h2>
+                            <h2 className="text-xs font-bold tracking-[0.3em] text-primary uppercase mb-6">Selected Projects</h2>
                             <h3 className="text-5xl md:text-6xl font-heading font-black tracking-tighter mb-8 leading-[0.9]">
                                 Crafting Digital <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Impact</span>
