@@ -36,45 +36,45 @@ export interface Testimonial {
 
 export const projects: Project[] = [
     {
-        id: 'lumina-saas',
-        title: 'Lumina Analytics',
-        description: 'A premium SaaS dashboard for AI-driven business insights.',
+        id: 'restaurant-app',
+        title: 'Demo_Restaurant',
+        description: 'An AI-powered restaurant recommendation engine with smart insights.',
+        category: 'Full Stack App',
+        image: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=800',
+        tags: ['Next.js', 'Supabase', 'Gemini AI', 'Tailwind'],
+        link: 'https://demo-resturant-blush.vercel.app/',
+        details: {
+            problem: 'Users struggle to find quality dining options tailored to their specific cravings and location.',
+            solution: 'Built a smart recommendation engine that uses AI to analyze preferences and provide curated dining insights.',
+            process: ['Database Design', 'AI Integration', 'Frontend Development', 'API Orchestration']
+        }
+    },
+    {
+        id: 'luxe-dining',
+        title: 'Demo_Dinning',
+        description: 'A premium restaurant landing page with elegant animations and reservation system.',
         category: 'Web Design',
-        image: '/projects/project-1.webp',
-        tags: ['Next.js', 'Framer Motion', 'Tailwind CSS'],
-        link: '#',
+        image: 'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=800',
+        tags: ['React', 'Framer Motion', 'Tailwind'],
+        link: 'https://restaurant-website-d-xotz.bolt.host/',
         details: {
-            problem: 'Complex data was difficult for users to interpret, leading to low engagement.',
-            solution: 'Designed a minimalist dashboard with clear visual hierarchy and interactive charts.',
-            process: ['User Research', 'Wireframing', 'High-fidelity UI Design', 'Interactive Prototyping']
+            problem: 'Traditional restaurant websites lack the visual elegance and smooth experience that high-end diners expect.',
+            solution: 'Created a cinematic, high-performance landing page that showcases the culinary experience through motion and minimalist design.',
+            process: ['Visual Storytelling', 'Motion Graphics', 'Responsive Design', 'Smooth Scroll Implementation']
         }
     },
     {
-        id: 'eco-store',
-        title: 'EcoStore E-commerce',
-        description: 'A sustainable fashion marketplace with a focus on minimalism.',
+        id: 'crafted-kiln',
+        title: 'Demo_Tiles',
+        description: 'A beautifully designed e-commerce experience for handmade ceramics and lifestyle products.',
         category: 'E-commerce',
-        image: '/projects/project-2.webp',
-        tags: ['React', 'Shopify', 'Three.js'],
-        link: '#',
+        image: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&q=80&w=800',
+        tags: ['React', 'E-commerce', 'Tailwind', 'Framing'],
+        link: 'https://crafted-kiln-commerce.lovable.app/',
         details: {
-            problem: 'The client needed a platform that reflected their sustainable values while maintaining high conversion rates.',
-            solution: 'Built a lightning-fast marketplace using a headless commerce approach with clean aesthetics.',
-            process: ['Market Analysis', 'Brand Identity', 'Frontend Development', 'Performance Optimization']
-        }
-    },
-    {
-        id: 'nexus-app',
-        title: 'Nexus Mobile App',
-        description: 'A social networking app focused on professional networking for designers.',
-        category: 'Mobile App',
-        image: '/projects/project-3.webp',
-        tags: ['React Native', 'Firebase', 'Sketch'],
-        link: '#',
-        details: {
-            problem: 'Existing platforms felt too corporate and lacked creative inspiration.',
-            solution: 'Created a sleek mobile experience that prioritizes visual content and peer interaction.',
-            process: ['UX Audit', 'Component Design', 'App Development', 'Beta Testing']
+            problem: 'The artisanal brand needed a digital home that matched the tactile and aesthetic quality of their handmade products.',
+            solution: 'Designed a minimalist, high-conversion storefront that uses high-end photography and smooth transitions to tell the brand story.',
+            process: ['Brand Alignment', 'UI/UX Design', 'Storefront Development', 'Motion Integration']
         }
     }
 ];

@@ -106,19 +106,41 @@ export function Portfolio() {
                                             exit={{ opacity: 0, scale: 0.5, x: -200, rotate: -20 }}
                                             transition={{ type: 'spring', stiffness: 100, damping: 20 }}
                                             className="absolute inset-0 cursor-pointer"
-                                            onClick={() => setActiveIndex(i)}
+                                            onClick={() => {
+                                                if (isActive) {
+                                                    window.open(project.link, '_blank');
+                                                } else {
+                                                    setActiveIndex(i);
+                                                }
+                                            }}
                                         >
-                                            <div className="w-full h-full bg-card border border-border rounded-[2rem] overflow-hidden shadow-2xl group">
+                                            <div className="w-full h-full bg-card border border-border rounded-[2rem] overflow-hidden shadow-2xl group relative">
                                                 <div className="relative w-full h-full">
-                                                    {/* Image Placeholder */}
-                                                    <div className="absolute inset-0 bg-muted flex items-center justify-center">
-                                                        <div className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.5em] opacity-10 -rotate-45">Selected Project</div>
+                                                    {/* Project Image / Placeholder */}
+                                                    <div className="absolute inset-0 bg-muted overflow-hidden">
+                                                        {project.image ? (
+                                                            <div className="relative w-full h-full">
+                                                                <Image
+                                                                    src={project.image}
+                                                                    alt={project.title}
+                                                                    fill
+                                                                    className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
+                                                                />
+                                                                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 mix-blend-overlay" />
+                                                            </div>
+                                                        ) : (
+                                                            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-card to-muted">
+                                                                <div className="text-[10px] text-muted-foreground font-black uppercase tracking-[0.5em] opacity-10 -rotate-45">
+                                                                    {project.title}
+                                                                </div>
+                                                            </div>
+                                                        )}
                                                     </div>
 
                                                     {/* Blur Overlay for background cards */}
-                                                    {!isActive && <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px] z-10" />}
+                                                    {!isActive && <div className="absolute inset-0 bg-background/40 backdrop-blur-[4px] z-10" />}
 
-                                                    <div className="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+                                                    <div className="absolute bottom-0 left-0 right-0 p-8 z-20 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
                                                         <div className="flex flex-wrap gap-2 mb-4">
                                                             {project.tags.slice(0, 2).map(tag => (
                                                                 <span key={tag} className="text-[10px] font-bold uppercase tracking-widest text-white/70 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
@@ -130,13 +152,13 @@ export function Portfolio() {
                                                         <p className="text-sm text-white/60 line-clamp-2 font-medium">{project.description}</p>
 
                                                         {isActive && (
-                                                            <motion.button
+                                                            <motion.div
                                                                 initial={{ opacity: 0, y: 10 }}
                                                                 animate={{ opacity: 1, y: 0 }}
                                                                 className="mt-6 flex items-center gap-2 text-white text-xs font-black uppercase tracking-widest group/btn"
                                                             >
                                                                 View Project <Plus size={14} className="group-hover/btn:rotate-90 transition-transform" />
-                                                            </motion.button>
+                                                            </motion.div>
                                                         )}
                                                     </div>
                                                 </div>
